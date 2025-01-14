@@ -3,6 +3,7 @@ Short C++ Programs that reflect small concepts learned
 
 - [Cpp-Shorts](#cpp-shorts)
 - [Data Type (my brain dump)](#data-type-my-brain-dump)
+- [Variable Initializiation](#variable-initializiation)
 
 # Data Type (my brain dump)
 In C++ we require that each object must have an associated Data type and the reason being that the compiler can actually
@@ -21,3 +22,25 @@ for correct and efficient storage with respect to that Architecture.
 
 This meanns there needs to be a standard for each type that has a way to serialize and de-serialize all of their binary
 data effectively and be consistent across different Architecture.
+
+
+# Variable Initializiation
+The idea of initializiation is that it will tell the compiler that we are defining a new variable and also adding a value
+to it that is also defined and can be immediately used.
+
+There are 5 different type of initializiation:
+
+1. Default initializiation - it is something that allows for any garbage value to present
+2. Copy initializiation - used primarily for primitive types where we copy using `operator=` from rhs to lhs
+3. Direct initializiation - uses a pair of paranthesis where it was primarily used for complex types initializiation
+4. Direct List initializiation - uses pair of curly braces that are used to provide direct values
+5. Value Initializiation - this also uses pair of curly braces but without any value in between - to zero/default
+
+We primarily use Direct List as it directly provides the value that we are interested in but this is not always case as
+with use of constructors and we also use Direct initializiation when using with `static_cast<>`.
+
+Another advantage of Direct List is that it prevents narrow type conversion such as `int w{4.5};` will lead to compiler
+error.
+
+An easy way to remember these initializiations is with the idea of: No initializiation, Equal to copy, paranthesis, 
+braces with specific value and braces with no value.
