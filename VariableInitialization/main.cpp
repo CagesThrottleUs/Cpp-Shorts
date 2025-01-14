@@ -28,5 +28,8 @@ auto main() -> int {
     // default with braces
     CustomDataType const third;
     std::cout << third.num << " w/ " << third.str << '\n';
+
+    // illegal narrow conversion - compile error
+    // int const wax{4.5};
     return 0;
 }
