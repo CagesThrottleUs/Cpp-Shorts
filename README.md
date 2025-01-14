@@ -33,7 +33,7 @@ There are 5 different type of initializiation:
 
 1. Default initializiation - it is something that allows for any garbage value to present
 2. Copy initializiation - used primarily for primitive types where we copy using `operator=` from rhs to lhs
-3. Direct initializiation - uses a pair of paranthesis where it was primarily used for complex types initializiation
+3. Direct initializiation - uses a pair of parenthesis where it was primarily used for complex types initializiation
 4. Direct List initializiation - uses pair of curly braces that are used to provide direct values
 5. Value Initializiation - this also uses pair of curly braces but without any value in between - to zero/default
 
@@ -43,7 +43,7 @@ with use of constructors and we also use Direct initializiation when using with 
 Another advantage of Direct List is that it prevents narrow type conversion such as `int w{4.5};` will lead to compiler
 error.
 
-An easy way to remember these initializiations is with the idea of: No initializiation, Equal to copy, paranthesis, 
+An easy way to remember these initializiations is with the idea of: No initializiation, Equal to copy, parenthesis, 
 braces with specific value and braces with no value.
 
 
