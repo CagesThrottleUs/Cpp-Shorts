@@ -4,6 +4,7 @@ Short C++ Programs that reflect small concepts learned
 - [Cpp-Shorts](#cpp-shorts)
 - [Data Type (my brain dump)](#data-type-my-brain-dump)
 - [Variable Initializiation](#variable-initializiation)
+- [Attribute: \[\[maybe\_unused\]\]](#attribute-maybe_unused)
 
 # Data Type (my brain dump)
 In C++ we require that each object must have an associated Data type and the reason being that the compiler can actually
@@ -25,8 +26,8 @@ data effectively and be consistent across different Architecture.
 
 
 # Variable Initializiation
-The idea of initializiation is that it will tell the compiler that we are defining a new variable and also adding a value
-to it that is also defined and can be immediately used.
+The idea of initializiation is that it will tell the compiler that we are defining a new variable and also adding a 
+value to it that is also defined and can be immediately used.
 
 There are 5 different type of initializiation:
 
@@ -44,3 +45,9 @@ error.
 
 An easy way to remember these initializiations is with the idea of: No initializiation, Equal to copy, paranthesis, 
 braces with specific value and braces with no value.
+
+
+# Attribute: [[maybe_unused]]
+
+This attribute is used for variables that are defined but it is possible that they may not be used - leading to warnings
+that a variable was not used. Using `[[maybe_unused]]` suppresses that warning allowing for easy compilation.
